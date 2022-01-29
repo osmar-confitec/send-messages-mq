@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CrossCutting.MessageBus.IntegrationEvents
+{
+   public  class GetCRLVElectronicIntegration : IntegrationEvent
+    {
+        public string placaVeiculo { get; set; }
+
+        public string renavamVeiculo { get; set; }
+    }
+}
