@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace CrossCutting.MessageBus.IntegrationEvents
 {
-  public  class PostAuthorizationsTransfersIntegration : IntegrationEvent
+     public  class PostZeroVehicleStockTransferAuthorization:IntegrationEvent
     {
         public string CnpjEstabelecimentoDestino { get; set; }
 
         public string CpfOperadorResponsavel { get; set; }
 
-        public string MulticastNotSupportedException { get; set; }
+        public int IdEstoque { get; set; }
 
-        public string PlacaVeiculo { get; set; }
-
-        public decimal ValorVenda { get; set; }
+        public decimal valorVenda { get; set; }
     }
 }

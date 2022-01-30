@@ -15,11 +15,11 @@ namespace Api.Configuration
            IConfiguration configuration)
         {
             services.AddMessageBus(configuration.GetMessageQueueConnection("MessageBus"))
-                .AddHostedService<GetAuthorizationsTransfersIntegrationHandler>()
-                .AddHostedService<GetCRLVElectronicIntegrationHandler>()
+               // .AddHostedService<GetAuthorizationsTransfersIntegrationHandler>()
+                //.AddHostedService<GetCRLVElectronicIntegrationHandler>()
                 .AddHostedService<GetStockVehicleFitnessIntegrationHandler>()
-                .AddHostedService<PostAuthorizationsTransfersIntegrationHandler>()
-                .AddHostedService<PostCancellationTransferAuthorizationsIntegrationHandler>()
+                //.AddHostedService<PostAuthorizationsTransfersIntegrationHandler>()
+               // .AddHostedService<PostCancellationTransferAuthorizationsIntegrationHandler>()
                 ;
         }
     }

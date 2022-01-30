@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace CrossCutting.MessageBus.IntegrationEvents
 {
-   public  class GetCRLVElectronicIntegration : IntegrationEvent
-    {
-        public string PlacaVeiculo { get; set; }
 
-        public string RenavamVeiculo { get; set; }
+   
+    public class GetCustomerAuthenticateIntegration : IntegrationEvent
+    {
+
+      
+
+
     }
 }

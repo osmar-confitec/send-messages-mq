@@ -21,10 +21,7 @@ namespace Domain.Services
         {
         }
 
-        protected override string SetQuee()
-        {
-            throw new NotImplementedException();
-        }
+        protected override string SetQuee() => string.Empty;
 
         protected override Task ExecuteIntegrationEventAsync(PostAuthorizationsTransfersIntegration ev)
         {

@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\CrossCutting.MessageBus\CrossCutting.MessageBus.csproj" />
+    <ProjectReference Include="..\..\CrossCutting\CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

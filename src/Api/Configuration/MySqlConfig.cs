@@ -11,7 +11,7 @@ namespace Api.Configuration
 {
     public static class MySqlConfig
     {
-        public static void AddSql(this IServiceCollection services,
+        public static void AddMySql(this IServiceCollection services,
         IConfiguration configuration)
         {
 
