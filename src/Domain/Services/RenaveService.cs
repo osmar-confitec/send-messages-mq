@@ -1,4 +1,6 @@
-﻿using Domain.Interfaces;
+﻿using CrossCutting.MessageBus.IntegrationEvents;
+using Domain.Interfaces;
+using Domain.Models.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +21,8 @@ namespace Domain.Services
             _httpClient = httpClient;
 
         }
+
+        public async Task<GetStockVehicleFitnessIntegrationResponse> GetStockVehicleFitnessAsync(GetStockVehicleFitnessIntegration getStockVehicleFitnessIntegration)
+                  => await GetAsync<GetStockVehicleFitnessIntegrationResponse, GetStockVehicleFitnessIntegration>(getStockVehicleFitnessIntegration, "/api/aptidao-veiculo-estoque");
     }
 }

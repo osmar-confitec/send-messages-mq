@@ -1,5 +1,7 @@
 ﻿using CrossCutting.MessageBus;
 using CrossCutting.MessageBus.IntegrationEvents;
+using Domain.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,7 @@ namespace Domain.Services
     /*[Get]/api/aptidao-veiculo-estoque Consultar aptidão de veículo para solicitação de entrada/saída em estoque.*/
     public class GetStockVehicleFitnessIntegrationHandler : BaseIntegrationHandler<GetStockVehicleFitnessIntegration>
     {
-        public GetStockVehicleFitnessIntegrationHandler(IServiceProvider serviceProvider, IMessageBus bus) 
+        public GetStockVehicleFitnessIntegrationHandler(IServiceProvider serviceProvider, IMessageBus bus)
                             : base(serviceProvider, bus)
         {
 
@@ -24,9 +26,17 @@ namespace Domain.Services
 
         protected override string SetQuee() => string.Empty;
 
-        protected override Task ExecuteIntegrationEventAsync(GetStockVehicleFitnessIntegration ev)
+        protected override async Task ExecuteIntegrationEventAsync(GetStockVehicleFitnessIntegration ev)
         {
-            throw new NotImplementedException();
+            using (var scope = _serviceProvider.CreateScope())
+            {
+
+                var renavanService = scope.ServiceProvider.GetRequiredService<IRenaveService>();
+                /*faz a requisição*/
+                var ret =  await renavanService.GetStockVehicleFitnessAsync(ev);
+
+                /*grava na base*/
+            }
         }
     }
 }
