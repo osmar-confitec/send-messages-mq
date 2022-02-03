@@ -1,5 +1,7 @@
 ﻿using CrossCutting.MessageBus;
 using CrossCutting.MessageBus.IntegrationEvents;
+using Domain.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -26,9 +28,17 @@ namespace Domain.Services
 
         }
 
-        protected override Task ExecuteIntegrationEventAsync(GetAuthorizationsTransfersIntegration ev)
+        protected override async Task ExecuteIntegrationEventAsync(GetAuthorizationsTransfersIntegration ev)
         {
-            throw new NotImplementedException();
+            using (var scope = _serviceProvider.CreateScope())
+            {
+
+                var renavanService = scope.ServiceProvider.GetRequiredService<IRenaveService>();
+                /*faz a requisição*/
+                var ret = await renavanService.GetAuthorizationsTransfersAsync(ev);
+
+                /*grava na base*/
+            }
         }
 
         protected override string SetQuee() => string.Empty;

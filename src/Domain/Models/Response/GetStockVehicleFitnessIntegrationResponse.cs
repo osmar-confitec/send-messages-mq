@@ -21,7 +21,7 @@ namespace Domain.Models.Response
     }
     public class Boletos {
 
-        public string DataVencimento { get; set; }
+        public DateTime DataVencimentoBoleto { get; set; }
 
         public string NumeroCodigoBarras { get; set; }
 
@@ -86,6 +86,11 @@ namespace Domain.Models.Response
 
         public bool VeiculoTemIntencaoDeVendaParaCompradorDiferenteDoEstabelecimentoConsultante { get; set; }
 
+        public Diagnostico()
+        {
+            MotivosParaNaoAptidao = new List<string>();
+        }
+
       }
     public class EstabelecimentoAutorizador
     {
@@ -98,7 +103,7 @@ namespace Domain.Models.Response
     {
         public string CpfOperadorResponsavelAutorizacao { get; set; }
 
-        public DateTime? DataHoraAutorizacao { get; set; }
+        public DateTime DataHoraAutorizacao { get; set; }
 
         public EstabelecimentoAutorizador EstabelecimentoAutorizador { get; set; }
 

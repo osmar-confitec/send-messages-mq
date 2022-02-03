@@ -13,5 +13,7 @@ namespace Domain.Interfaces
 
         Task<GetStockVehicleFitnessIntegrationResponse> GetStockVehicleFitnessAsync(GetStockVehicleFitnessIntegration getStockVehicleFitnessIntegration);
 
+        Task<IEnumerable<GetAuthorizationsTransfersIntegrationResponse>> GetAuthorizationsTransfersAsync(GetAuthorizationsTransfersIntegration getAuthorizationsTransfersIntegration);
+
     }
 }
