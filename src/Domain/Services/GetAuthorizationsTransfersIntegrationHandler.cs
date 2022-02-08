@@ -35,7 +35,7 @@ namespace Domain.Services
 
                 var renavanService = scope.ServiceProvider.GetRequiredService<IRenaveService>();
                 /*faz a requisição*/
-                var ret = await renavanService.GetAuthorizationsTransfersAsync(ev);
+                //var ret = await renavanService.GetAuthorizationsTransfersAsync(ev);
 
                 /*grava na base*/
             }

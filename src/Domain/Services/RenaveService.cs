@@ -22,10 +22,10 @@ namespace Domain.Services
 
         }
 
-        public async Task<IEnumerable<GetAuthorizationsTransfersIntegrationResponse>> GetAuthorizationsTransfersAsync(GetAuthorizationsTransfersIntegration getAuthorizationsTransfersIntegration)
-        => await GetAsync<IEnumerable<GetAuthorizationsTransfersIntegrationResponse>, GetAuthorizationsTransfersIntegration>(getAuthorizationsTransfersIntegration, "/api/autorizacoes-transferencias");
+        //public async Task<IEnumerable<ObterAutorizacoesTransferenciasIntegrationResponse>> GetAuthorizationsTransfersAsync(GetAuthorizationsTransfersIntegration getAuthorizationsTransfersIntegration)
+        //=> await GetAsync<IEnumerable<ObterAutorizacoesTransferenciasIntegrationResponse>, GetAuthorizationsTransfersIntegration>(getAuthorizationsTransfersIntegration, "/api/autorizacoes-transferencias");
 
-        public async Task<GetStockVehicleFitnessIntegrationResponse> GetStockVehicleFitnessAsync(GetStockVehicleFitnessIntegration getStockVehicleFitnessIntegration)
-                  => await GetAsync<GetStockVehicleFitnessIntegrationResponse, GetStockVehicleFitnessIntegration>(getStockVehicleFitnessIntegration, "/api/aptidao-veiculo-estoque");
+        public async Task<ObterAutorizacoesTransferenciasResponse> GetStockVehicleFitnessAsync(ObterAutorizacoesTransferenciasIntegration getStockVehicleFitnessIntegration)
+                  => await GetAsync<ObterAutorizacoesTransferenciasResponse, ObterAutorizacoesTransferenciasIntegration>(getStockVehicleFitnessIntegration, "/api/aptidao-veiculo-estoque");
     }
 }

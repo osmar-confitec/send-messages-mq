@@ -17,7 +17,7 @@ namespace Api.Configuration
             services.AddMessageBus(configuration.GetMessageQueueConnection("MessageBus"))
                // .AddHostedService<GetAuthorizationsTransfersIntegrationHandler>()
                 //.AddHostedService<GetCRLVElectronicIntegrationHandler>()
-                .AddHostedService<GetStockVehicleFitnessIntegrationHandler>()
+               // .AddHostedService<GetStockVehicleFitnessIntegrationHandler>()
                 //.AddHostedService<PostAuthorizationsTransfersIntegrationHandler>()
                // .AddHostedService<PostCancellationTransferAuthorizationsIntegrationHandler>()
                 ;

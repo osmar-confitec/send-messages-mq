@@ -11,9 +11,9 @@ namespace Domain.Interfaces
    public  interface IRenaveService
     {
 
-        Task<GetStockVehicleFitnessIntegrationResponse> GetStockVehicleFitnessAsync(GetStockVehicleFitnessIntegration getStockVehicleFitnessIntegration);
+        Task<ObterAutorizacoesTransferenciasResponse> GetStockVehicleFitnessAsync(ObterAutorizacoesTransferenciasIntegration getStockVehicleFitnessIntegration);
 
-        Task<IEnumerable<GetAuthorizationsTransfersIntegrationResponse>> GetAuthorizationsTransfersAsync(GetAuthorizationsTransfersIntegration getAuthorizationsTransfersIntegration);
+       // Task<IEnumerable<ObterAutorizacoesTransferenciasIntegrationResponse>> GetAuthorizationsTransfersAsync(GetAuthorizationsTransfersIntegration getAuthorizationsTransfersIntegration);
 
     }
 }
