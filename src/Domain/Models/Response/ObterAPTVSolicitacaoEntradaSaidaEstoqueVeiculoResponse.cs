@@ -9,6 +9,16 @@ namespace Domain.Models.Response
 
     public class Veiculo
     {
+
+
+          
+
+
+
+
+
+
+
         public string Chassi { get; set; }
 
         public string Placa { get; set; }
